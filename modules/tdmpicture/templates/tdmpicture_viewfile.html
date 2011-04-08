@@ -1,0 +1,144 @@
+<br />
+   <script type="text/javascript">
+      var $tdmpicture = jQuery.noConflict();
+$tdmpicture(document).ready(function(){
+
+  $tdmpicture('.boxgrid').hover(function() {
+        $tdmpicture(".cover", this).stop().animate({bottom:'0px'},{queue:false,duration:160});
+    }, function() {
+        $tdmpicture(".cover", this).stop().animate({bottom:'-120px'},{queue:false,duration:160});
+    });
+
+
+
+});
+	</script> 
+	
+ <div style="margin-left:auto;margin-right:auto;">
+	<{include file="db:tdmpicture_tpcat.html"}>
+
+  <br class="clear"/>
+
+<div align="center"><span><{$nav_page}></span></div>
+ <br class="clear"/>
+
+
+<{if $numfile != 0}>
+<{foreach item=file from=$file}>
+
+<table class="tdmp_table"><tr>
+<th align="center"><span class="switch_title"><{$file.title}></span> <span class="switch_fav"><{$file.favourite}></span></th></tr>
+<tr><td align="center">
+
+<div class="boxgrid">
+    <a href="<{$file.img_popup}>" rel="splash.image" title="<{$smarty.const._MD_TDMPICTURE_SCREEN}>: <{$file.title}>" alt="<{$smarty.const._MD_TDMPICTURE_SCREEN}>: <{$file.title}>" ><{$file.img}></a>
+    <div class="cover boxcaption">
+        <p style="color: #FFF;"><{$smarty.const._MD_TDMPICTURE_MORE}></p>
+		    
+	<div class="detail_info" style="float:left;"> 
+		<a href="<{$file.img_popup}>" rel="splash.image|title" title="<{$file.title}>" alt="<{$file.title}>" ><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_demo.png" title="<{$smarty.const._MD_TDMPICTURE_SCREEN}>" alt="<{$smarty.const._MD_TDMPICTURE_SCREEN}>" /></a>
+<{if $file.useralb }><a href="<{$smarty.const.TDMPICTURE_URL}>/viewalb.php?ut=<{$file.uid}>" ><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_photo.png" title="<{$smarty.const._MD_TDMPICTURE_VIEWALBUM}> <{$file.postername}>"></a><{/if}>
+  <{if $perm_dl}><a href="<{$smarty.const.TDMPICTURE_URL}>/download.php?st=<{$file.id}>" ><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_down.png" title="<{$smarty.const._MD_TDMPICTURE_DL}>"></a><{/if}>
+	</div>
+	
+		<div class="detail_info">
+<{$smarty.const._MD_TDMPICTURE_CAT}>: <{$file.cat}><br />
+<{$smarty.const._MD_TDMPICTURE_TYPE}>: <{$file.type}><br />
+<{$smarty.const._MD_TDMPICTURE_SIZE}>: <{$file.size}><br />
+<{$smarty.const._MD_TDMPICTURE_WITH}>: <{$file.with}>*<{$file.height}></a>
+<br/>
+    </div>
+	
+
+</div></div>
+
+</td></tr><tr><td>
+<ul id="display">
+<li style="list-style: none;">
+<div style="float:left; text-align:left;">
+<div class="switch_title"><{$file.title}> <span class="switch_fav"><{$file.favourite}></span></div>
+
+<div class="switch_desc">
+<b><{$smarty.const._MD_TDMPICTURE_DESC}></b><br /><{$file.text}><br /><br />
+	<{if $perm_vote}>
+	<a href="javascript:;"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/good-mark.png" onclick="AddVote(<{$file.id}>);return false;" title="<{$smarty.const._MD_TDMPICTURE_VOTEADD}>"></a> <a href="javascript:;"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/bad-mark.png" onclick="RemoveVote(<{$file.id}>);return false;" title="<{$smarty.const._MD_TDMPICTURE_VOTEREMOVE}>"></a>
+	<{/if}> 
+	<{$file.moyen}>
+	</div>
+
+</div>
+
+<div class="switch_info" style="float:right;">
+<span align="left" style="background: url(<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_user.png) no-repeat left;  "><{$smarty.const._MD_TDMPICTURE_POWERBY}> <a href="<{$xoops_url}>/user.php?id=<{$file.uid}>"><{$file.postername}></a></span><br />
+<span align="left" style="background: url(<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_date.png) no-repeat left; "><{$smarty.const._MD_TDMPICTURE_IN}>: <{$file.indate}></span><br />
+<span align="left" style="background: url(<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_hits.png) no-repeat left;"><{$smarty.const._MD_TDMPICTURE_HITS}>: <{$file.hits}></span><br />
+<span align="left" style="background: url(<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_down.png) no-repeat left;"><{$smarty.const._MD_TDMPICTURE_DL}>: <{$file.dl}></span><br />
+<span align="left" style="background: url(<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_star.png) no-repeat left;"><{$smarty.const._MD_TDMPICTURE_VOTE}>: <{$file.counts}>/<{$file.votes}></span><br />
+<span align="left" style="background: url(<{$smarty.const.TDMPICTURE_IMAGES_URL}>/min_comment.png) no-repeat left;"><{$smarty.const._MD_TDMPICTURE_COMMENT}>: <{$file.comments}> </span><br />
+</div>
+<{if $file.menu}>
+<br class="clear"/>
+<div class="switch_info" style="float:right;">
+<div align="center">
+<{if $file.edit}>
+<a href="<{$smarty.const.TDMPICTURE_URL}>/modfile.php?op=edit&file_id=<{$file.id}>"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/btn_edit.png"></a> 
+<a href="<{$smarty.const.TDMPICTURE_URL}>/modfile.php?op=edit_img&file_id=<{$file.id}>"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/btn_modify.png"></a> 
+<{/if}>
+<{if $file.del}>
+<a href="<{$smarty.const.TDMPICTURE_URL}>/modfile.php?op=delete&file_id=<{$file.id}>"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/btn_delete.png"></a>
+<{/if}>
+</div>
+</div>
+<{/if}>
+<{/foreach}>	
+</td></tr>
+<{if $smarty.const.TDMPICTURE_PDF}>
+<tr><td> 
+<div style="float: left;">
+<a href="<{$smarty.const.TDMPICTURE_URL}>/pdf_paper.php?option=auto&st=<{$file.id}>"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/pdf_mini.png" title="<{$smarty.const._MD_TDMPICTURE_PDFAUTO}>" alt="<{$smarty.const._MD_TDMPICTURE_PDFAUTO}>" /></a> <a href="<{$smarty.const.TDMPICTURE_URL}>/pdf_paper.php?option=A4&st=<{$file.id}>" title="<{$smarty.const._MD_TDMPICTURE_PDFA4}>" alt="<{$smarty.const._MD_TDMPICTURE_PDFA4}>" ><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/pdf_A4.png" title="<{$smarty.const._MD_TDMPICTURE_PDFA4}>" alt="<{$smarty.const._MD_TDMPICTURE_PDFA4}>" /></a> 
+<a href="<{$smarty.const.TDMPICTURE_URL}>/pdf_paper.php?option=A3&st=<{$file.id}>"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/pdf_A3.png" title="<{$smarty.const._MD_TDMPICTURE_PDFA3}>" alt="<{$smarty.const._MD_TDMPICTURE_PDFA3}>" /></a> <a href="<{$smarty.const.TDMPICTURE_URL}>/pdf_paper.php?option=A2&st=<{$file.id}>"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/pdf_A2.png" title="<{$smarty.const._MD_TDMPICTURE_PDFA2}>" alt="<{$smarty.const._MD_TDMPICTURE_PDFA2}>" /></a> 
+<a href="<{$smarty.const.TDMPICTURE_URL}>/pdf_paper.php?option=A1&st=<{$file.id}>"><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/pdf_A1.png" title="<{$smarty.const._MD_TDMPICTURE_PDFA1}>" alt="<{$smarty.const._MD_TDMPICTURE_PDFA1}>" /></a>
+</div>
+</li></ul>
+</td></tr>
+<{/if}>
+</table>
+<br /><br />
+
+<!-- Display navigation  -->
+<div align="center"><{$nav_page}></div>
+<br />
+<!-- AddThis Button BEGIN -->
+<{if $smarty.const.TDMPICTURE_SOCIAL}>
+<div style="float:left;"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4ac5feea790b0936"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4ac5feea790b0936"></script></div>
+<{/if}>
+<!-- AddThis Button END -->
+<!-- Button RSS -->
+<{if $smarty.const.TDMPICTURE_RSS}>
+<div style="float:right;"><a href="<{$smarty.const.TDMPICTURE_URL}>/rss.php" title="<{$smarty.const._MD_TDMPICTURE_RSS}>" alt="<{$smarty.const._MD_TDMPICTURE_RSS}>" ><img src="<{$smarty.const.TDMPICTURE_IMAGES_URL}>/rss.png" title="<{$smarty.const._MD_TDMPICTURE_RSS}>" alt="<{$smarty.const._MD_TDMPICTURE_RSS}>" /></a></div>
+<{/if}>
+<!-- Button RSS END-->
+
+<br class="clear"/>	<br />
+
+
+<div style="text-align: center; padding: 3px; margin: 3px;">
+  <{$commentsnav}>
+  <{$lang_notice}>
+</div>
+<!-- start comments loop -->
+<div style="margin: 3px; padding: 3px;">
+<{if $comment_mode == "flat"}>
+  <{include file="db:system_comments_flat.html"}>
+<{elseif $comment_mode == "thread"}>
+  <{include file="db:system_comments_thread.html"}>
+<{elseif $comment_mode == "nest"}>
+  <{include file="db:system_comments_nest.html"}>
+<{/if}>
+</div>
+
+<{/if}>
+
+<br class="clear"/>	<br />
+	
+</div>
