@@ -1,0 +1,36 @@
+*********************************************************************************
+************* CHANGELOG TRADUZIONE per CORE XOOPS ***************************
+---------------------------------------------------------------------------------
+----------------------------------------------------------- by Xoops Italia -----
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+
+* 2.0.16 *
+-----------------------
+- Aggiunti files lingua per language/italian/xoopsmailerlocal.php e language/italian/auth.php
+- Aggiunto file lingua in class/mail/phpmailer/phpmailerlang-it.php
+- Aggiunte costanti mappatura campi per autenticazione in system/language/italian/admin/preferences.php
+- Miglioramento linguaggio per metodo notifica (modifica profilo)
+
+
+* 2.0.14/2.0.15 *
+-----------------------
+- Modificata voce "Menu' di amministrazione" in "Amministrazione"
+- Aggiunta costante in: system/admin/smileys (_AM_DISPLAYF)
+- Aggiunte tre nuove costanti in: system/admin/blocksadmin (_AM_CBBOTTOM, _AM_CBBOTTOMLEFT, _AM_CBBOTTOMRIGHT)
+- Modificate alcune costanti in: system/admin/preferences (_MD_AM_DEBUGMODE1,_MD_AM_DEBUGMODE2,_MD_AM_THEMEFILE,_MD_AM_THEMEFILEDSC)
+- Aggiunta una costante a: language/english/comment.php (_CM_RE)
+- aggiunt nuove costanti per le opzioni di autenticazione in: system/admin/preferences
+- Piccole correzioni linguistiche
+- Miglioramento linguaggio per metodo notifica (modifica profilo)
+
+
+----------------------------------------------------------------------------------
+Ultimo aggiornamento: 10/1/2007 - a cura di Ianez [Xoops Italia STAFF] -----------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Traduzione orginale by BlueAngel, Dantom - Revisione a cura di Ianez -------------
+----------------------------------------------------------------------------------
+Supporto: www.xoopsitalia.org - www.xoops.org [Eng] ------------------------------
+__________________________________________________________________________________
