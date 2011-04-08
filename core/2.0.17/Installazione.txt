@@ -1,0 +1,20 @@
+*********************************************************************************
+************* INSTALLAZIONE TRADUZIONE per CORE XOOPS ***************************
+---------------------------------------------------------------------------------
+----------------------------------------------------------- by Xoops Italia -----
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+- Aprite il vostro client ftp e accedete alla root (cartella principale)
+  del vostro Xoops.
+- Copiate il contenuto della cartella principale dell'archivio zip direttamente
+  nella root, sovrascrivendo i files precedenti. L'archivio è già strutturato per
+  aggiornare i files in modo corretto.
+
+
+
+----------------------------------------------------------------------------------
+Traduzione orginale by BlueAngel, Dantom - Revisione a cura di Ianez -------------
+----------------------------------------------------------------------------------
+Supporto: www.xoopsitalia.org - www.xoops.org [Eng] ------------------------------
+__________________________________________________________________________________
