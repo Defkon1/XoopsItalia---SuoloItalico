@@ -1,0 +1,75 @@
+*********************************************************************************
+************* CHANGELOG TRADUZIONE per CORE XOOPS ***************************
+---------------------------------------------------------------------------------
+----------------------------------------------------------- by Xoops Italia -----
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+
+* 2.0.18 *
+-----------------------
+
+- Aggiornamento delle condizioni di utilizzo generali del sito (d.lgs 196/03)
+- Aggiornamento globale intestazioni/id files di lingua
+
+- Aggiunto file: /language/italian/banners.php
+- Aggiunto file: /upgrade/language/italian/upgrade.php (solo in pacchetti completi)
+- Aggiunto file: /modules/system/xoopsversion.php
+
+- Aggiunta costante in /language/italian/findusers.php
+- Aggiunte costanti in /language/italian/global.php
+
+- Migliorie/Revisione traduzione per installazione (/install/language/italian)
+- Migliorie/Revisione traduzione in: /language/italian/[diversi files]
+- Migliorie/Revisione traduzione in: modules/system/language/italian/[diversi files]
+
+
+
+* 2.0.17/2.0.17.1 *
+-----------------------
+- Aggiunto file:  /language/italian/findusers.php
+- Aggiunto file:  /language/italian/uploader.php
+
+- Aggiunta costante _AM_GROUPS in  /modules/system/language/italian/admin/findusers.php
+- Aggiunta costante _MD_AM_CONFIG in /modules/system/language/italian/admin.php
+- Aggiunta costante _AM_CNRNU2 in  /modules/system/language/italian/admin/users.php
+- Aggiunte costanti _MD_AM_LDAP_USETLS e _MD_AM_LDAP_USETLS_DESC a /modules/system/language/italian/admin/preferences.php
+- Aggiunta costante _AUTH_LDAP_START_TLS_FAILED in /languages/italian/auth.php
+- Aggiunta costante _NOT_NOTHINGTODELETE in /languages/italian/notification.php 
+
+- Migliorie traduzione in /modules/system/language/italian/admin/users.php
+- Migliorie traduzione in /modules/system/language/italian/admin.php
+- Migliorie traduzione in /modules/system/language/italian/admin/preferences.php
+
+- Modifica voce 'Messaggi in arrivo' in 'Posta in arrivo' nel Menù utente.
+
+
+
+* 2.0.16 *
+-----------------------
+- Aggiunti files lingua per language/italian/xoopsmailerlocal.php e language/italian/auth.php
+- Aggiunto file lingua in class/mail/phpmailer/phpmailerlang-it.php
+- Aggiunte costanti mappatura campi per autenticazione in system/language/italian/admin/preferences.php
+- Miglioramento linguaggio per metodo notifica (modifica profilo)
+
+
+* 2.0.14/2.0.15 *
+-----------------------
+- Modificata voce "Menu' di amministrazione" in "Amministrazione"
+- Aggiunta costante in: system/admin/smileys (_AM_DISPLAYF)
+- Aggiunte tre nuove costanti in: system/admin/blocksadmin (_AM_CBBOTTOM, _AM_CBBOTTOMLEFT, _AM_CBBOTTOMRIGHT)
+- Modificate alcune costanti in: system/admin/preferences (_MD_AM_DEBUGMODE1,_MD_AM_DEBUGMODE2,_MD_AM_THEMEFILE,_MD_AM_THEMEFILEDSC)
+- Aggiunta una costante a: language/english/comment.php (_CM_RE)
+- aggiunt nuove costanti per le opzioni di autenticazione in: system/admin/preferences
+- Piccole correzioni linguistiche
+- Miglioramento linguaggio per metodo notifica (modifica profilo)
+
+
+----------------------------------------------------------------------------------
+Ultimo aggiornamento: 07/01/2008 - a cura di Ianez [Xoops Italia STAFF] -----------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Traduzione orginale by BlueAngel, Dantom - Revisione a cura di Ianez -------------
+----------------------------------------------------------------------------------
+Supporto: www.xoopsitalia.org - www.xoops.org [Eng] ------------------------------
+__________________________________________________________________________________
